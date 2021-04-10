@@ -4,7 +4,7 @@ MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 
 # install FastQC
 RUN apk update && \
-    apk add bash openjdk8-jre-base perl && \
+    apk add bash openjdk8-jre-base perl zip && \
     wget "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip" && \
     unzip fastqc_v0.11.9.zip && \
     sed -i 's/Xmx250m/Xmx1G/g' FastQC/fastqc && \
