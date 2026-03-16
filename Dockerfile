@@ -12,4 +12,4 @@ RUN apk update && \
     chmod a+x FastQC/fastqc && \
     mv FastQC /usr/local/bin/FastQC && \
     ln -s /usr/local/bin/FastQC/fastqc /usr/local/bin/fastqc && \
-    rm fastqc_v0.11.9.zip
+    rm fastqc_*.zip
