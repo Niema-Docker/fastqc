@@ -1,5 +1,5 @@
 # Minimal Docker image for FastQC using Alpine base
-FROM alpine:3.13.5
+FROM alpine:latest
 
 # install FastQC
 RUN apk update && \
