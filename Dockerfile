@@ -1,11 +1,10 @@
 # Minimal Docker image for FastQC using Alpine base
 FROM alpine:3.13.5
-MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 
 # install FastQC
 RUN apk update && \
-    apk add bash openjdk8-jre-base perl zip && \
-    wget "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.12.1.zip" && \
+    apk add --no-cache bash openjdk8-jre-base perl zip && \
+    wget "https://github.com/s-andrews/FastQC/releases/download/v0.13.0/fastqc_v0.13.0.zip" && \
     unzip fastqc_*.zip && \
     sed -i 's/Xmx250m/Xmx1G/g' FastQC/fastqc && \
     sed -i 's/= 250 */= 1024 */g' FastQC/fastqc && \
